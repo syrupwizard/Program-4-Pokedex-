@@ -2,16 +2,16 @@
 void welcome();
 void displayMenu();
 void userChoice(int &userNum);
-void runMenu(int &userNum);
+void runMenu(int &userNum, pokedex &a_pokedex);
 
 int main()
 {
 	pokedex a_pokedex;
 	int userNum = 0;
 	welcome();
-	userChoice(userNum);	
+
 	while(userNum != 4)
-		runMenu(userNum);
+		runMenu(userNum, a_pokedex);
 	return 0;
 }
 
@@ -19,7 +19,6 @@ void welcome()
 {
 	cout << "PokeDex program. You are now enterying Hyrule!" << endl;
 }
-
 
 //This function displays to the user a list of options to allow them to interact with
 //userChoice() and runMenu() functions.
@@ -63,14 +62,15 @@ void userChoice(int &userChoice)
 //input includes int choice from userChoice and various other flags to keep things running
 //smoothly
 //no direct output
-void runMenu (int &userNum)
+void runMenu (int &userNum, pokedex &a_pokedex)
 {
 	displayMenu();
 	userChoice(userNum);
 	switch(userNum)
 	{
 		case 1:
-			//addPokemon();
+			a_pokedex.pListHelper();	
+			a_pokedex.addP();
 			break;
 		case 2:
 			//displayPokemon();

@@ -8,7 +8,6 @@ const int NAME = 30;
 const int TYPE = 150;
 const int MOVES = 150;
 
-
 struct pokemon
 {
 	char name[NAME];
@@ -17,6 +16,7 @@ struct pokemon
 	int candy;
 	int hp;
 };
+
 class pokedex
 {
 	public:
@@ -28,8 +28,7 @@ class pokedex
 		void displayPType();
 
 	private:
-		pokemon *a_pokemon;
-		pokemon *pList = new pokemon[pListCap];
+		pokemon *pList;
 		int pListCap;
 		int pListCount;
 	
