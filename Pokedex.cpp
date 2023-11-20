@@ -52,13 +52,12 @@ void pokedex::pListHelper()
 
 }
 /*
- *
  * 	char name[NAME];
 	char type[TYPE];
 	char moves[MOVES];
 	int candy;
 	int hp;
-	*/
+*/
 void pokedex::addP()
 {
 	if(pListCount < pListCap)
@@ -129,31 +128,6 @@ struct pokemon
 	int candy;
 	int hp;
 };
-*/
-/*
-list::list()
-{
-cout << "How many movies would you like: ";
-cin >> size_of_array;
-cin.ignore(100, '\n');
-array = new movie[size_of_array];
-num_of_movies = 0;
-
-alternative:
-array = NULL;
-size_of_array = 0;
-num_of_movies = 0;
-}
-
-//Destructor will deallocate the dynamic memory
-list::~list()
-{
-if (NULL != array)
-delete [] array;
-array = 0;
-size_of_array = 0;
-num_of_movies = 0;
-}
 */
 
 
