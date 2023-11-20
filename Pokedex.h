@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cctype>
 #include <cstring>
-
 using namespace std;
 
 const int NAME = 30;
@@ -10,6 +9,8 @@ const int MOVES = 150;
 
 struct pokemon
 {
+	pokemon();
+	~pokemon();
 	char name[NAME];
 	char type[TYPE];
 	char moves[MOVES];
@@ -31,6 +32,5 @@ class pokedex
 		pokemon *pList;
 		int pListCap;
 		int pListCount;
-	
 };
 

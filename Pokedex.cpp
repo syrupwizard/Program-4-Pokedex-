@@ -1,60 +1,18 @@
 #include "Pokedex.h"
-/*
-class pokedex
+//Struct constructor/destructor
+pokemon::pokemon()
 {
-	public:
-		pokedex();
-		~pokedex();
-		void pListHelpgter();
-		void addP();
-		void displayP();
-		void displayPType();
-
-	private:
-		pokemon pList[];
-		int pListCap;
-		int pListCount;
-	
-};
-
-struct pokemon
-{
-	char name[NAME];
-	char type[TYPE];
-	char moves[MOVES];
-	int candy;
-	int hp;
-};
-*/
-/*
-list::list()
-{
-cout << "How many movies would you like: ";
-cin >> size_of_array;
-cin.ignore(100, '\n');
-array = new movie[size_of_array];
-num_of_movies = 0;
-
-alternative:
-array = NULL;
-size_of_array = 0;
-num_of_movies = 0;
+	cout << "Pokemon has been constructed!" << endl;
 }
 
-//Destructor will deallocate the dynamic memory
-list::~list()
+pokemon::~pokemon()
 {
-if (NULL != array)
-delete [] array;
-array = 0;
-size_of_array = 0;
-num_of_movies = 0;
 }
-*/
+
+
 
 pokedex::pokedex()
 {
-
 	pList  = nullptr;
 	pListCount = 0;
 	pListCap = 0;
@@ -135,5 +93,67 @@ void pokedex::addP()
 
 void pokedex::displayP()
 {
-
+	for(int i = 0; i < pListCount; ++i)
+	{
+		cout << "Pokemon #" << i+1 << endl;
+		cout << "Name: " << pList[i].name << endl;
+		cout << "Type: " << pList[i].type << endl;
+		cout << "Candies req: " << pList[i].candy << endl;
+		cout << "HP: " << pList[i].hp << endl;
+		
+	}
 }
+/*
+class pokedex
+{
+	public:
+		pokedex();
+		~pokedex();
+		void pListHelpgter();
+		void addP();
+		void displayP();
+		void displayPType();
+
+	private:
+		pokemon pList[];
+		int pListCap;
+		int pListCount;
+	
+};
+
+struct pokemon
+{
+	char name[NAME];
+	char type[TYPE];
+	char moves[MOVES];
+	int candy;
+	int hp;
+};
+*/
+/*
+list::list()
+{
+cout << "How many movies would you like: ";
+cin >> size_of_array;
+cin.ignore(100, '\n');
+array = new movie[size_of_array];
+num_of_movies = 0;
+
+alternative:
+array = NULL;
+size_of_array = 0;
+num_of_movies = 0;
+}
+
+//Destructor will deallocate the dynamic memory
+list::~list()
+{
+if (NULL != array)
+delete [] array;
+array = 0;
+size_of_array = 0;
+num_of_movies = 0;
+}
+*/
+
+
