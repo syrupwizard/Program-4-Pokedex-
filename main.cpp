@@ -1,12 +1,20 @@
+//Austin Huerta's program 4 for CS162
+//on 11/24/23
+//This pokedex will allow the user to create, and reference pokemon they meet on their travels. The user can choose from 1 of 4
+//options in a menu, which allow the user to create and access their pokedex.
+
+
 #include "Pokedex.h"
 void welcome();
 void displayMenu();
 void userChoice(int &userNum);
 void runMenu(int &userNum, pokedex &a_pokedex);
 
+//main simply calls higher level functions such as welcome, functions to run menu.
 int main()
 {
 	pokedex a_pokedex;
+
 	int userNum = 0;
 	welcome();
 
@@ -15,6 +23,9 @@ int main()
 	return 0;
 }
 
+
+//This function will welcome the user and explain the program
+//It takes no input and displays text
 void welcome()
 {
 	cout << R"(
@@ -37,7 +48,6 @@ void welcome()
 
 	cout << "Press enter to continue." << endl;
 	cin.get();
-	cin.ignore(100,'\n');
 
 	cout << endl;
 	cout << "Hello trainer! Prof. Oak here. To get started using your new Pokedex,"
@@ -46,7 +56,6 @@ void welcome()
 	cout << endl;
 
 	cout << "Press enter to continue." << endl;
-	cin.get();
 	cin.ignore(100,'\n');
 
 	cout << "You got a Poke dex from Prof. Oak!" << endl;
@@ -169,13 +178,14 @@ void runMenu (int &userNum, pokedex &a_pokedex)
 	{
 		case 1:
 			a_pokedex.pListHelper();	
+			a_pokedex.mListHelper();
 			a_pokedex.addP();
 			break;
 		case 2:
 			a_pokedex.displayP();
 			break;
 		case 3:
-//			a_pokedex.displayPType();
+			a_pokedex.displayPType();
 			break;
 		case 4:
 			cout << endl;
